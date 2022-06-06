@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <ul>
+        {% for color in colors %}
+        <li>{{ color }}</li>
+        {% endfor %}
+    </ul>
+    {% if 'Blacks' in colors %}
+    <span>
+        Black is in the list
+    </span>
+    {% else %}
+    <span>
+        Black is not in colors
+    </span>
+    {% endif %}
+{% endblock body %}
